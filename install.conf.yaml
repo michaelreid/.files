@@ -1,7 +1,27 @@
-- clean: ['~']
-- link: 
+- clean: ['~'] 
+
+- link:
+
+# Dotfiles as a submodule
     ~/.dotfiles: ''
+
+
+# Git configuration
+    ~/.gitconfig: git/gitconfig
+
+# Tmux configuration files
     ~/.tmux: tmux/
     ~/.tmux.conf: tmux/tmux.conf
+
+# Emacs configuration files
     ~/.emacs.d: emacs/
+
+# Bash configuration files
+    ~/.bashrc: bash/bashrc
+    ~/.bash_logout: bash/bash_logout
+
+# Xmodmap keyboard mapping
+    ~/.Xmodmap: Xmodmap/Xmodmap
+
+
 - shell: []

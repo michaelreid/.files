@@ -6,3 +6,7 @@ emacs/auto-save-list/*
 emacs/themes/*
 emacs/current-init.el
 
+# Ignore submodules
+dotbot
+tmux/plugins/*
+

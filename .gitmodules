@@ -1,3 +1,16 @@
+# Dotbot submodule
+###############################
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+
+# Tmux-Plugin Manager Submodules
+################################
+[submodule "tmux-plugin-manager"]
+	path = tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+
+[submodule "tmux-battery"]
+	path = tmux/plugins/tmux-battery
+	url = https://github.com/tmux-plugins/tmux-battery
+

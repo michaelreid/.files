@@ -14,3 +14,14 @@
 	path = tmux/plugins/tmux-battery
 	url = https://github.com/tmux-plugins/tmux-battery
 
+[submodule "tmux-resurect"]
+	path = tmux/plugins/tmux-ressurect
+	url = https://github.com/tmux-plugins/tmux-resurrect
+
+[submodule "tmux-continuum"]
+	path = tmux/plugins/tmux-continuum
+	url = https://github.com/tmux-plugins/tmux-continuum
+
+[submodule "tmux-online-status"]
+	path = tmux/plugins/tmux-online-status
+	url = https://github.com/tmux-plugins/tmux-online-status

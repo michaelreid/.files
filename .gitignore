@@ -7,11 +7,3 @@ emacs/themes/*
 emacs/current-init.el
 emacs/ac-comphist.dat
 emacs/eproject.lst
-
-
-
-
-# Ignore submodules
-dotbot
-tmux/plugins/*
-

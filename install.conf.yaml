@@ -2,5 +2,6 @@
 - link: 
     ~/.dotfiles: ''
     ~/.tmux: tmux/
+    ~/.tmux.conf: tmux/tmux.conf
     ~/.emacs.d: emacs/
 - shell: []

@@ -4,7 +4,14 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 
-# Tmux-Plugin Manager Submodules
+
+[submodule "dotbot/lib/pyyaml"]
+	path = dotbot/lib/pyyaml
+	url = https://github.com/anishathalye/pyyaml
+
+
+
+# Tmux-Plugin Manager submodules
 ################################
 [submodule "tmux-plugin-manager"]
 	path = tmux/plugins/tpm
@@ -14,8 +21,8 @@
 	path = tmux/plugins/tmux-battery
 	url = https://github.com/tmux-plugins/tmux-battery
 
-[submodule "tmux-resurect"]
-	path = tmux/plugins/tmux-ressurect
+[submodule "tmux-resurrect"]
+	path = tmux/plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect
 
 [submodule "tmux-continuum"]
@@ -25,3 +32,10 @@
 [submodule "tmux-online-status"]
 	path = tmux/plugins/tmux-online-status
 	url = https://github.com/tmux-plugins/tmux-online-status
+
+
+# Emacs submodules
+#################################
+[submodule "emacs-for-python"]
+	path = emacs/emacs-for-python
+	url = https://github.com/gabrielelanaro/emacs-for-python

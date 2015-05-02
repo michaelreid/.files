@@ -1,0 +1,10 @@
+
+*.*~
+ac-comphist.dat
+elpa/*
+eproject.lst
+games/*
+ido.last
+auto-save-list/*
+
+my-customizations/my-erc-pass.el

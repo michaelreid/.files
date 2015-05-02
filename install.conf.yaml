@@ -17,9 +17,6 @@
 # 3. Tmux configuration
 #########################
 
-- shell:
-    [mkdir -pv ~/.tmux/, "Creating Tmux configuration directory"]
-
 - link:
     ~/.tmux: tmux/
     ~/.tmux.conf: tmux/tmux.conf
@@ -27,9 +24,6 @@
 
 # 4. Emacs configuration
 ##########################
-
-- shell:
-    [mkdir -pv ~/.emacs.d/, "Creating emacs.d directory to house all our emacs config"]
 
 - link:
     ~/.emacs.d: emacs/

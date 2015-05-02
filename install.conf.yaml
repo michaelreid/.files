@@ -3,46 +3,48 @@
 - link:
 
 # 1. Dotfiles as a submodule
-#########################
+#----------------------------
 
     ~/.dotfiles: ''
 
 
 # 2. Git configuration
-#########################
+#----------------------------
 
     ~/.gitconfig: git/gitconfig
 
 
 # 3. Tmux configuration
-#########################
+#----------------------------
 
-- link:
     ~/.tmux: tmux/
     ~/.tmux.conf: tmux/tmux.conf
 
 
 # 4. Emacs configuration
-##########################
+#----------------------------
 
-- link:
     ~/.emacs.d: emacs/
 
-# 5. Bash configuration files
-###########################
+# 5. Bash configuration
+#-----------------------------
 
     ~/.bashrc: bash/bashrc
+    ~/.bash_profile: bash/bash_profile
+    ~/.bash_aliases: bash/bash_aliases
     ~/.bash_logout: bash/bash_logout
 
 # 6. Xmodmap keyboard mapping
-###########################
+#-----------------------------
+
     ~/.Xmodmap: Xmodmap/Xmodmap
 
 
 # 7. Other Shell commands
-###########################
+#------------------------------
 
 
-### Import git submodules
+# 7.1 Import git submodules
+#----------------------
 
 - shell: [git submodule update --init --recursive]

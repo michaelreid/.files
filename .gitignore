@@ -1,0 +1,8 @@
+# Ignore emacs directories
+emacs/elpa/*
+emacs/backups/*
+emacs/cider-history
+emacs/auto-save-list/*
+emacs/themes/*
+emacs/current-init.el
+

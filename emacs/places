@@ -1,0 +1,9 @@
+;;; -*- coding: utf-8 -*-
+(("/home/m/.emacs.d/elpa/archives/gnu/archive-contents" . 16730)
+ ("/home/m/.emacs.d/elpa/archives/marmalade/archive-contents" . 111535)
+ ("/home/m/.emacs.d/elpa/archives/melpa/archive-contents" . 360362)
+ ("/home/m/.emacs.d/elpa/archives/tromey/archive-contents" . 11669)
+ ("/home/m/.emacs.d/elpa/xclip-1.3/xclip-autoloads.el" . 731)
+ ("/home/m/.lein/profiles.clj" . 44)
+ ("/home/m/clojure/brave-clojure/src/brave_clojure/core.clj" . 133)
+ ("/home/m/clojure/superjushi/resources/templates/config.edn" . 267))

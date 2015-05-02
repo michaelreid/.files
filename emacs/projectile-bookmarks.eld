@@ -1,0 +1,1 @@
+("~/clojure/brave-clojure/" "~/clojure/superjushi/" "~/.emacs.d/")

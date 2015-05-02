@@ -1,3 +1,6 @@
-- clean: []
-- link: {}
+- clean: ['~']
+- link: 
+    ~/.dotfiles: ''
+    ~/.tmux: tmux/
+    ~/.emacs.d: emacs/
 - shell: []

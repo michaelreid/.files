@@ -8,4 +8,11 @@ emacs/current-init.el
 emacs/ac-comphist.dat
 emacs/eproject.lst
 emacs/ido.last
+emacs/.emacs.desktop
+
+# Ignore tmux saves
 tmux/resurrect/*
+
+# Ignore temporary files that are in emacs buffers
+bash/#*
+*/#*

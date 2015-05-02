@@ -1,5 +1,6 @@
 
 *.*~
+.emacs.desktop
 ac-comphist.dat
 elpa/*
 eproject.lst

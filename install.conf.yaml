@@ -27,7 +27,6 @@
 
 - link:
     ~/.emacs.d: emacs/
-    ~/.emacs.d/my-customizations: emacs/my-customizations/
 
 # 5. Bash configuration files
 ###########################

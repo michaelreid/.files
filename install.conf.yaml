@@ -5,9 +5,14 @@
 # Dotfiles as a submodule
     ~/.dotfiles: ''
 
-
 # Git configuration
     ~/.gitconfig: git/gitconfig
+
+
+- shell:
+    [mkdir -pv ~/.tmux/, "Creating Tmux configuration directory"]
+
+- link:
 
 # Tmux configuration files
     ~/.tmux: tmux/

@@ -5,6 +5,11 @@ emacs/cider-history
 emacs/auto-save-list/*
 emacs/themes/*
 emacs/current-init.el
+emacs/ac-comphist.dat
+emacs/eproject.lst
+
+
+
 
 # Ignore submodules
 dotbot

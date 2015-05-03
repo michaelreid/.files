@@ -9,6 +9,8 @@ emacs/ac-comphist.dat
 emacs/eproject.lst
 emacs/ido.last
 emacs/.emacs.desktop
+emacs/.*
+
 
 # Ignore tmux saves
 tmux/resurrect/*

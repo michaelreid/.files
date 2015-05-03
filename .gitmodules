@@ -1,5 +1,5 @@
-# Dotbot submodule
-###############################
+#       ;; DOTBOT ;;
+#-------------------------------------------------
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
@@ -11,8 +11,8 @@
 
 
 
-# Tmux-Plugin Manager submodules
-################################
+#       ;; TMUX PLUGIN MANAGER ;;
+#--------------------------------------------------
 [submodule "tmux-plugin-manager"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
@@ -34,11 +34,19 @@
 	url = https://github.com/tmux-plugins/tmux-online-status
 
 
-# Emacs submodules
-#################################
+#       ;;  EMACS   ;;
+#--------------------------------------------------
 [submodule "emacs-for-python"]
 	path = emacs/emacs-for-python/
 	url = https://github.com/gabrielelanaro/emacs-for-python
 [submodule "emacs/emacs-for-python"]
 	path = emacs/emacs-for-python
 	url = git@github.com:gabrielelanaro/emacs-for-python.git
+
+
+#       ;;  BASH   ;;
+#--------------------------------------------------
+[submodule "solarized-for-gnome-terminal"]
+	path = bash/gnome-terminal-colors-solarized
+	url = https://github.com/Anthony25/gnome-terminal-colors-solarized
+

@@ -40,14 +40,14 @@
 ;; Set-up to use cut and paste in Emacs in terminal
 (load "my-cut-paste.el")
 
-;; Set-up Emacs IRC settings 
-(load "my-erc-settings.el")
-
 ;; Settings for using emacs-w3m
 (load "my-emacs-w3m-settings.el")
 
 ;; Settings for Emacs server
 (load "my-server-mode.el")
+
+;; Settings for Org mode
+(load "my-org-mode.el")
 
 ;; Session Management file
 (load "my-session-mgmt.el")
@@ -67,15 +67,6 @@
 
 ;; All yes or no queries to 'y or n'
 (fset 'yes-or-no-p 'y-or-n-p)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
+
+

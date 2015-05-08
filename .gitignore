@@ -18,3 +18,9 @@ tmux/resurrect/*
 # Ignore temporary files that are in emacs buffers
 bash/#*
 */#*
+ssh/
+ssh/*
+emacs/tramp
+bash/.#*
+tmux/.#*
+weechat/logs/*

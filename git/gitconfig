@@ -1,3 +1,10 @@
 [user]
 	name = michael reid
 	email = michaelreid@users.noreply.github.com
+[alias]
+	st = status
+	ci = commit -m
+	br = branch
+  	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  	type = cat-file -t
+  	dump = cat-file -p

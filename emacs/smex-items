@@ -1,0 +1,37 @@
+
+;; ----- smex-history -----
+(
+ display-battery-mode
+ apropos
+ display-time-mode
+ shell
+ apropos-user-option
+ sml/apply-theme
+ smart-mode-line-enable
+)
+
+;; ----- smex-data -----
+(
+ (rename-uniquely . 1)
+ (message-insert-to . 1)
+ (column-number-mode . 2)
+ (erc . 1)
+ (erc-mode . 2)
+ (w3m-open-site . 1)
+ (ocodo-svg-modelines-init . 3)
+ (display-time-world . 1)
+ (display-time-mode . 2)
+ (display-battery-mode . 2)
+ (shell-script-mode . 1)
+ (shell . 2)
+ (package-list-packages . 1)
+ (color-theme-print . 1)
+ (color-theme-select . 1)
+ (list-packages . 1)
+ (smart-mode-line-enable . 3)
+ (sml/setup . 2)
+ (sml/customize . 1)
+ (sml/apply-theme . 6)
+ (apropos-user-option . 1)
+ (apropos . 3)
+)

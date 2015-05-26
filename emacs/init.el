@@ -1,11 +1,41 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                             ;; 
+;;    ;; ;; ;;  CUSTOM SETTINGS  ;; ;; ;;      ;;
+;;                                             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Turn off the Menu Bar
+(menu-bar-mode -1)
+
+;; Unbind C-z for to avoid suspending
+;; the session in tmux 
+(global-unset-key "\C-z")
+
+;; Don't lock files
+(setq create-lockfiles "nil")
+
+;; All yes or no queries to 'y or n'
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; Set column number mode on
+(setq column-number-mode t)
+
+;; Display time mode on
+(display-time-mode)
+
+;; Display battery percentage
+(display-battery-mode)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                                             ;; 
 ;;    ;; ;; ;;  PACKAGES MGMT  ;; ;; ;;        ;;
 ;;                                             ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Define package repositories
 (require 'package)
+
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
@@ -19,23 +49,25 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-;; The packages you want installed. You can also install these
-(load-file "~/.emacs.d/emacs-for-python/epy-init.el")
-
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
 ;; This also sets the load path.
 (package-initialize)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                                                  ;; 
+;;    ;; ;; ;;  MY CUSTOMISATION FILES  ;; ;; ;;    ;;
+;;                                                  ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;                                             ;; 
-;;    ;; ;; ;;  MY CUSTOMIZATIONS  ;; ;; ;;    ;;
-;;                                             ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Load the python emacs kit
+(load-file "~/.emacs.d/emacs-for-python/epy-init.el")
 
 ;; Add `my-customizations` directory to load path
 (add-to-list 'load-path "~/.emacs.d/my-customizations")
+
+;; Add powerline directory to load path
+(add-to-list 'load-path "~/.emacs.d/my-customizations/my-powerline")
 
 ;; Set-up to use cut and paste in Emacs in terminal
 (load "my-cut-paste.el")
@@ -46,27 +78,14 @@
 ;; Settings for Emacs server
 (load "my-server-mode.el")
 
-;; Settings for Org mode
-(load "my-org-mode.el")
-
 ;; Session Management file
 (load "my-session-mgmt.el")
 
-;; Not load with *scratch* buffer
+;; Settings to load *scratch* buffer
 (load "my-scratch.el")
 
-;; Turn Off the Menu Bar
-(menu-bar-mode -1)
+;; Settings to autoload smex
+(load "my-smex.el")
 
-;; Unbind C-z for to avoid suspending
-;; the session in tmux 
-(global-unset-key "\C-z")
-
-;; Don't lock files
-(setq create-lockfiles "nil")
-
-;; All yes or no queries to 'y or n'
-(fset 'yes-or-no-p 'y-or-n-p)
-
-
-
+;; Load smart-mode-line settings
+(load "my-safe-mode-line.el")

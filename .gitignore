@@ -10,7 +10,8 @@ emacs/eproject.lst
 emacs/ido.last
 emacs/.emacs.desktop
 emacs/.*
-
+emacs/*/.*
+emacs/*/#*
 
 # Ignore tmux saves
 tmux/resurrect/*

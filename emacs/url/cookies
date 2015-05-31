@@ -1,0 +1,33 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".luckypeach.com"
+  [url-cookie "__cfduid" "dc103b1b8cc73c4523c192933486d07b51432899086" "28 May 16 11:31:26 [GMT]" "/" ".luckypeach.com" nil]
+  [url-cookie "HttpOnly" nil "28 May 16 11:31:26 [GMT]" "/" ".luckypeach.com" nil])
+ (".twitter.com"
+  [url-cookie "guest_id" "v1%3A143300106782118443" "29-May-2017 15:51:07.00 UTC" "/" ".twitter.com" nil])
+ (".haskell.org"
+  [url-cookie "HttpOnly" nil "29 May 16 15:47:59 [GMT]" "/" ".haskell.org" nil]
+  [url-cookie "__cfduid" "d5d4a8073b471cc2fae718380e97f11e61433000879" "29 May 16 15:47:59 [GMT]" "/" ".haskell.org" nil])
+ ("pragmaticemacs.com"
+  [url-cookie "_clef_state" "TY4ONwvNgY13sjQEsSDcXi0g" "01-Jun-2015 01:19:59.00 GMT" "/" "pragmaticemacs.com" nil]
+  [url-cookie "httponly" nil "01-Jun-2015 01:19:59.00 GMT" "/" "pragmaticemacs.com" nil])
+ (".google.com.au"
+  [url-cookie "PREF" "ID=ead171d7e9ada7f2:U=3ab7f1ad157a4f02:FF=0:TM=1433035757:LM=1433035763:S=ftyCKyrEJ5w1wjqN" "30-May-2017 01:29:23.00 GMT" "/" ".google.com.au" nil]
+  [url-cookie "NID" "67=VfSH8VKdKxguFif4PmnCuYpr8cMS2D4NBKMVgDTT4JFP2xyIWAlUZD_LWqQMbiP1ZiLMTIIfJJL-XKqVr_rntAh-3ya-4iFIUaeXKtrMvIOGzMXKASVjs7WJLOR9ulZm" "30-Nov-2015 01:29:17.00 GMT" "/" ".google.com.au" nil]
+  [url-cookie "HttpOnly" nil "30-Nov-2015 01:29:17.00 GMT" "/" ".google.com.au" nil])
+ (".ycombinator.com"
+  [url-cookie "HttpOnly" nil "26 May 16 15:14:57 [GMT]" "/" ".ycombinator.com" nil]
+  [url-cookie "__cfduid" "dcdfdf5258f3f11dba3d65f297ecf26b21432739697" "26 May 16 15:14:57 [GMT]" "/" ".ycombinator.com" nil]))
+)
+(setq url-cookie-secure-storage
+ '((".github.com"
+  [url-cookie "HttpOnly" nil "Wed, 30 May 2035 15:54:09 -0000" "/" ".github.com" t]
+  [url-cookie "logged_in" "no" "Wed, 30 May 2035 15:54:09 -0000" "/" ".github.com" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

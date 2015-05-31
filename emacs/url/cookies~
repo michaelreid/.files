@@ -1,0 +1,29 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".ycombinator.com"
+  [url-cookie "__cfduid" "dcdfdf5258f3f11dba3d65f297ecf26b21432739697" "26 May 16 15:14:57 [GMT]" "/" ".ycombinator.com" nil]
+  [url-cookie "HttpOnly" nil "26 May 16 15:14:57 [GMT]" "/" ".ycombinator.com" nil])
+ (".haskell.org"
+  [url-cookie "__cfduid" "d5d4a8073b471cc2fae718380e97f11e61433000879" "29 May 16 15:47:59 [GMT]" "/" ".haskell.org" nil]
+  [url-cookie "HttpOnly" nil "29 May 16 15:47:59 [GMT]" "/" ".haskell.org" nil])
+ ("www.haskellers.com"
+  [url-cookie "_SESSION" "ruI/r+w7WYJlOeTkPORFBLtbzG+039kGGMZCEr0slP/eBo/WkEl5tIkNzK6NWAfeSaTZM+wVmD3twiqY8LdGQlYtP/tmd8a2/GRA8yzzrKT4DU7zovV5LwZ7bWMnWY2yK4kVsDzt+8w=" "30-May-2015 17:49:38.00 GMT" "/" "www.haskellers.com" nil]
+  [url-cookie "HttpOnly" nil "30-May-2015 17:49:38.00 GMT" "/" "www.haskellers.com" nil])
+ (".twitter.com"
+  [url-cookie "guest_id" "v1%3A143300106782118443" "29-May-2017 15:51:07.00 UTC" "/" ".twitter.com" nil])
+ (".luckypeach.com"
+  [url-cookie "HttpOnly" nil "28 May 16 11:31:26 [GMT]" "/" ".luckypeach.com" nil]
+  [url-cookie "__cfduid" "dc103b1b8cc73c4523c192933486d07b51432899086" "28 May 16 11:31:26 [GMT]" "/" ".luckypeach.com" nil]))
+)
+(setq url-cookie-secure-storage
+ '((".github.com"
+  [url-cookie "logged_in" "no" "Wed, 30 May 2035 15:54:09 -0000" "/" ".github.com" t]
+  [url-cookie "HttpOnly" nil "Wed, 30 May 2035 15:54:09 -0000" "/" ".github.com" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

@@ -1,34 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                             ;; 
-;;    ;; ;; ;;  CUSTOM SETTINGS  ;; ;; ;;      ;;
-;;                                             ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; Turn off the Menu Bar
-(menu-bar-mode -1)
-
-;; Unbind C-z for to avoid suspending
-;; the session in tmux 
-(global-unset-key "\C-z")
-
-;; Don't lock files
-(setq create-lockfiles "nil")
-
-;; All yes or no queries to 'y or n'
-(fset 'yes-or-no-p 'y-or-n-p)
-
-;; Set column number mode on
-(setq column-number-mode t)
-
-;; Display time mode on
-(display-time-mode)
-
-;; Display battery percentage
-(display-battery-mode)
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;                                             ;; 
 ;;    ;; ;; ;;  PACKAGES MGMT  ;; ;; ;;        ;;
 ;;                                             ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -89,3 +60,47 @@
 
 ;; Load smart-mode-line settings
 (load "my-safe-mode-line.el")
+
+;; Load smart-mode-line settings
+(load "my-display-time-settings.el")
+
+;; Ace-jump mode settings to jump to point in buffer with keyboard
+(load "my-ace-jump-mode.el")
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                                                ;; 
+;;    ;; ;; ;;  MY CUSTOM SETTINGS  ;; ;; ;;      ;;
+;;                                                ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Turn off the Menu Bar
+(menu-bar-mode -1)
+
+;; Unbind C-z for to avoid suspending
+;; the session in tmux 
+(global-unset-key "\C-z")
+
+;; Don't lock files
+(setq create-lockfiles "nil")
+
+;; All yes or no queries to 'y or n'
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; Set column number mode on
+(setq column-number-mode t)
+
+;; Display time mode on
+(display-time-mode)
+
+;; Disable arrow keys and others
+(require 'no-easy-keys)
+(no-easy-keys 1)
+
+;; Display battery percentage
+(display-battery-mode)
+
+;; Set-up weechat for irc
+(require 'weechat)
+
+

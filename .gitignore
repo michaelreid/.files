@@ -12,6 +12,7 @@ emacs/.emacs.desktop
 emacs/.*
 emacs/*/.*
 emacs/*/#*
+emacs/url/cache/*
 
 # Ignore tmux saves
 tmux/resurrect/*

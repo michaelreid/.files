@@ -10,7 +10,7 @@
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
-             '("tromey" . "http://tromey.com/elpa/") t)
+             '("elpa" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
@@ -20,7 +20,54 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-;; Load and activate emacs packages. Do this first so that the
+
+;; Define list of local packages that need to install if not alrady installed
+;; to make transportable across systems
+;;
+;; For all environments:
+;; - projectile
+;; - auto-complete
+;; - smex
+;; - s
+;; - smart-mode-line
+;; - multiple-cursors
+;; - no-easy-keys
+;; - ace-jump-mode
+;; 
+;; For Python Environment:
+;; - epc
+;; - jedi
+;;
+;; For Ruby on Rails:
+;; -
+;; -
+;;
+;; Other packages for emacs setup:
+;; - weechat
+;; -
+
+
+;; This method from jedi-starter.el github user wernerandrew
+;; https://raw.githubusercontent.com/wernerandrew/jedi-starter/master/jedi-starter.el
+(defvar local-packages '(projectile auto-complete epc jedi smex s smart-mode-line
+				    multiple-cursors no-easy-keys ace-jump-mode weechat))
+
+(defun uninstalled-packages (packages)
+  (delq nil
+	(mapcar (lambda (p) (if (package-installed-p p nil) nil p)) packages)))
+
+;; This delightful bit adapted from:
+;; http://batsov.com/articles/2012/02/19/package-management-in-emacs-the-good-the-bad-and-the-ugly/
+
+(let ((need-to-install (uninstalled-packages local-packages)))
+  (when need-to-install
+    (progn
+      (package-refresh-contents)
+      (dolist (p need-to-install)
+	(package-install p)))))
+
+
+; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
 ;; This also sets the load path.
 (package-initialize)
@@ -36,9 +83,6 @@
 
 ;; Add `my-customizations` directory to load path
 (add-to-list 'load-path "~/.emacs.d/my-customizations")
-
-;; Add powerline directory to load path
-(add-to-list 'load-path "~/.emacs.d/my-customizations/my-powerline")
 
 ;; Set-up to use cut and paste in Emacs in terminal
 (load "my-cut-paste.el")
@@ -102,5 +146,3 @@
 
 ;; Set-up weechat for irc
 (require 'weechat)
-
-

@@ -45,10 +45,10 @@
     ~/.Xmodmap: Xmodmap/Xmodmap
 
 
-#   Conkeror
+#   Keysnail
 #-----------------------------
 
-    ~/.conkerorrc: conkerorrc/
+    ~/.keysnail.js: keysnail.js
 
 #   SSH
 #-----------------------------

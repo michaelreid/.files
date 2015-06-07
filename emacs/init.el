@@ -21,6 +21,13 @@
   (package-refresh-contents))
 
 
+
+; Load and activate emacs packages. Do this first so that the
+;; packages are loaded before you start trying to modify them.
+;; This also sets the load path.
+(package-initialize)
+
+
 ;; Define list of local packages that need to install if not alrady installed
 ;; to make transportable across systems
 ;;
@@ -33,6 +40,7 @@
 ;; - multiple-cursors
 ;; - no-easy-keys
 ;; - ace-jump-mode
+;; - ido-vertical-mode
 ;; 
 ;; For Python Environment:
 ;; - epc
@@ -43,14 +51,13 @@
 ;; -
 ;;
 ;; Other packages for emacs setup:
-;; - weechat
 ;; -
 
 
 ;; This method from jedi-starter.el github user wernerandrew
 ;; https://raw.githubusercontent.com/wernerandrew/jedi-starter/master/jedi-starter.el
 (defvar local-packages '(projectile auto-complete epc jedi smex s smart-mode-line
-				    multiple-cursors no-easy-keys ace-jump-mode weechat))
+				    multiple-cursors no-easy-keys ace-jump-mode ido-vertical-mode))
 
 (defun uninstalled-packages (packages)
   (delq nil
@@ -66,11 +73,6 @@
       (dolist (p need-to-install)
 	(package-install p)))))
 
-
-; Load and activate emacs packages. Do this first so that the
-;; packages are loaded before you start trying to modify them.
-;; This also sets the load path.
-(package-initialize)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                                  ;; 
@@ -144,5 +146,3 @@
 ;; Display battery percentage
 (display-battery-mode)
 
-;; Set-up weechat for irc
-(require 'weechat)

@@ -148,4 +148,6 @@
 ;; Display battery percentage
 (display-battery-mode)
 
+;; Start ido-vertical mode auto
+(ido-vertical-mode t)
 

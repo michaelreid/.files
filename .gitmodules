@@ -5,7 +5,7 @@
 	url = https://github.com/anishathalye/dotbot
 
 
-[submodule "dotbot/lib/pyyaml"]
+[submodule "lib/pyyaml"]
 	path = dotbot/lib/pyyaml
 	url = https://github.com/anishathalye/pyyaml
 
@@ -50,3 +50,9 @@
 	path = bash/gnome-terminal-colors-solarized
 	url = https://github.com/Anthony25/gnome-terminal-colors-solarized
 
+
+#       ;;  ZSH    ;;
+#--------------------------------------------------
+[submodule "oh-my-zsh"]
+	path = zsh/oh-my-zsh
+	url = git@github.com:robbyrussell/oh-my-zsh.git

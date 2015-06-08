@@ -39,11 +39,27 @@
     ~/.gnome-terminal-colors-solarized: bash/gnome-terminal-colors-solarized
     ~/.solarized-colours: bash/solarized-colours
 
+#   Zsh
+#-----------------------------
+    
+    ~/.zshrc: zsh/zshrc
+    ~/.zsh-update: zsh/zsh-update
+    ~/.oh-my-zsh: zsh/oh-my-zsh/
+
+
 #   Xmodmap
 #-----------------------------
 
-    ~/.Xmodmap: Xmodmap/Xmodmap
+    ~/.Xmodmap: Xmodmap
 
+
+#   Openbox
+#-----------------------------
+
+    ~/.config/openbox/autostart: openbox/autostart
+    ~/.config/openbox/environment: openbox/environment
+    ~/.config/openbox/rc.xml: openbox/rc.xml
+    ~/.config/openbox/menu.xml: openbox/menu.xml
 
 #   Keysnail
 #-----------------------------
@@ -62,7 +78,6 @@
     ~/.weechat: weechat/
 
 
-
 # Shell commands
 #------------------------------
 
@@ -71,4 +86,5 @@
 #----------------------
 
 - shell: [git submodule update --init --recursive]
+
 

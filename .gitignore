@@ -29,3 +29,6 @@ weechat/logs/*
 /emacs/smex-items
 /emacs/server/
 /emacs/%backup%~
+/openbox/rc.xml~
+/zsh/zshrc~
+/openbox/autostart~

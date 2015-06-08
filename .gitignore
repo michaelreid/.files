@@ -26,3 +26,6 @@ emacs/tramp
 bash/.#*
 tmux/.#*
 weechat/logs/*
+/emacs/smex-items
+/emacs/server/
+/emacs/%backup%~

@@ -19,10 +19,10 @@ fi
 
 
 # ## Ensure 256 color in terminal and tmux:
-# [ -z "$TMUX" ] && export TERM=xterm-256color
+export TERM=xterm-256color
 
 
-export PS1="\[\033[1;36m\]${debian_chroot:+($debian_chroot)}\@ > \u@\h:\w\[\033[00m\]\\
+export PS1="\[\033[1;36m\] > \u@\h:\w\[\033[00m\]\\
 \n$ "
 
 

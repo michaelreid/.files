@@ -41,6 +41,7 @@
 ;; - no-easy-keys
 ;; - ace-jump-mode
 ;; - ido-vertical-mode
+;; - magit
 ;; 
 ;; For Python Environment:
 ;; - epc
@@ -56,8 +57,9 @@
 
 ;; This method from jedi-starter.el github user wernerandrew
 ;; https://raw.githubusercontent.com/wernerandrew/jedi-starter/master/jedi-starter.el
-(defvar local-packages '(projectile auto-complete epc jedi smex s smart-mode-line
-				    multiple-cursors no-easy-keys ace-jump-mode ido-vertical-mode))
+(defvar local-packages '(projectile auto-complete epc jedi smex s smart-mode-line magit
+				    multiple-cursors no-easy-keys ace-jump-mode 
+				    ido-vertical-mode))
 
 (defun uninstalled-packages (packages)
   (delq nil
@@ -145,4 +147,5 @@
 
 ;; Display battery percentage
 (display-battery-mode)
+
 

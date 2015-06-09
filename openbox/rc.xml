@@ -344,8 +344,6 @@
       </action>
     </keybind>
 
-
-
     <!-- Launch gnome-screenshot when Print is pressed -->
     <keybind key="Print">
       <action name="Execute">
@@ -810,15 +808,17 @@
 
   # end of the example
 -->
+	
+	<application name="gnome-terminal">
+		<maximised>yes</maximised>
+  		<fullscreen>yes</fullscreen>
+		<decor>no</decor>
+	</application>
 
-<application name="gnome-terminal">
-  <fullscreen>yes</fullscreen>
-</application>
-
-<application name="firefox">
-  <maximised>yes</maximised>
-  <decor>no</decor>
-  <fullscreen>yes</fullscreen>
-</application>
+	<application name="firefox">
+  		<maximised>yes</maximised>
+  		<decor>no</decor>
+  		<fullscreen>yes</fullscreen>
+	</application>
   </applications>
 </openbox_config>

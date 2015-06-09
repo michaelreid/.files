@@ -32,3 +32,4 @@ weechat/logs/*
 /openbox/rc.xml~
 /zsh/zshrc~
 /openbox/autostart~
+/bash/ps1~

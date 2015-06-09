@@ -32,6 +32,7 @@
 #-----------------------------
 
     ~/.bashrc: bash/bashrc
+    ~/.bash_PS1: bash/ps1
     ~/.bash_profile: bash/bash_profile
     ~/.bash_aliases: bash/bash_aliases
     ~/.bash_logout: bash/bash_logout
@@ -52,6 +53,11 @@
 
     ~/.Xmodmap: Xmodmap
 
+
+#   Xinit
+# ----------------------------
+   
+    ~/.xinitrc: xinitrc
 
 #   Openbox
 #-----------------------------

@@ -30,5 +30,31 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+export PS1="\[\033[1;36m\][ \T ] > \u@\h:\w\[\033[00m\]\\
+\n$ "
+"]]"
+
+
+
+
+# add bash aliases to session
+source ~/.bash_aliases
+
+
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# gitprompt configuration
+
+# Set config variables first
+GIT_PROMPT_ONLY_IN_REPO=1
+
+# GIT_PROMPT_FETCH_REMOTE_STATUS=0   # uncomment to avoid fetching remote status
+
+# GIT_PROMPT_START=...    # uncomment for custom prompt start sequence
+# GIT_PROMPT_END=...      # uncomment for custom prompt end sequence
+
+# as last entry source the gitprompt script
+# GIT_PROMPT_THEME=Custom # use custom .git-prompt-colors.sh
+# GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
+source ~/.bash-git-prompt/gitprompt.sh

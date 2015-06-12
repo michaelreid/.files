@@ -50,6 +50,10 @@
 	path = bash/gnome-terminal-colors-solarized
 	url = https://github.com/Anthony25/gnome-terminal-colors-solarized
 
+[submodule "informative-bash-prompt"]
+	path = bash/bash-git-prompt
+	url = https://github.com/magicmonty/bash-git-prompt
+
 
 #       ;;  ZSH    ;;
 #--------------------------------------------------

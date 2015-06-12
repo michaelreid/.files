@@ -39,6 +39,7 @@
     ~/.dircolors: bash/dircolors
     ~/.gnome-terminal-colors-solarized: bash/gnome-terminal-colors-solarized
     ~/.solarized-colours: bash/solarized-colours
+    ~/.bash-git-prompt: bash/bash-git-prompt
 
 #   Zsh
 #-----------------------------

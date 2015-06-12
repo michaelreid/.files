@@ -42,6 +42,7 @@
 ;; - ace-jump-mode
 ;; - ido-vertical-mode
 ;; - magit
+;; - helm
 ;; 
 ;; For Python Environment:
 ;; - epc
@@ -59,7 +60,7 @@
 ;; https://raw.githubusercontent.com/wernerandrew/jedi-starter/master/jedi-starter.el
 (defvar local-packages '(projectile auto-complete epc jedi smex s smart-mode-line magit
 				    multiple-cursors no-easy-keys ace-jump-mode 
-				    ido-vertical-mode))
+				    ido-vertical-mode helm))
 
 (defun uninstalled-packages (packages)
   (delq nil
@@ -115,6 +116,8 @@
 ;; Ace-jump mode settings to jump to point in buffer with keyboard
 (load "my-ace-jump-mode.el")
 
+;; Load helm-mode and config
+(load "my-helm-mode-config.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                                ;; 
@@ -151,18 +154,35 @@
 ;; Start ido-vertical mode auto
 (ido-vertical-mode t)
 
+;; Require and start helm
+(require 'helm)
+(require 'helm-config)
+(helm-mode t)
+
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(custom-enabled-themes (quote (tango-dark)))
+ '(magit-item-highlight-face nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(magit-diff-add ((t (:background "color-123" :foreground "black"))))
- '(magit-diff-del ((t (:background "color-177" :foreground "black"))))
- '(magit-diff-file-header ((t (:background "color-27" :foreground "brightwhite"))))
- '(magit-item-highlight ((t (:background "color-27" :foreground "brightwhite")))))
+ '(custom-variable-tag ((t (:foreground "color-33" :weight bold))))
+ '(font-lock-comment-face ((t (:foreground "brightred"))))
+ '(font-lock-function-name-face ((t (:foreground "brightcyan"))))
+ '(font-lock-keyword-face ((t (:foreground "color-200"))))
+ '(font-lock-string-face ((t (:foreground "color-135"))))
+ '(magit-diff-add ((t (:foreground "color-40"))) t)
+ '(magit-diff-del ((t (:foreground "red"))) t)
+ '(magit-diff-file-header ((t (:foreground "brightyellow"))) t)
+ '(magit-diff-hunk-header ((t (:foreground "brightwhite"))) t)
+ '(magit-item-highlight ((t (:background "color-20" :foreground "brightwhite"))) t)
+ '(magit-item-mark ((t (:background "color-20" :foreground "brightwhite"))) t)
+ '(magit-log-head-label-bisect-bad ((t (:background "color-20" :foreground "red" :box 1))) t)
+ '(minibuffer-prompt ((t (:foreground "color-27")))))

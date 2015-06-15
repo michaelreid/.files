@@ -820,5 +820,12 @@
   		<decor>no</decor>
   		<fullscreen>yes</fullscreen>
 	</application>
+
+	<application name="emacsclient">
+		<maximised>yes</maximised>
+  		<fullscreen>yes</fullscreen>
+		<decor>no</decor>
+	</application>
+
   </applications>
 </openbox_config>

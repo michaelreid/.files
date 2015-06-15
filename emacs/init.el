@@ -7,8 +7,8 @@
 ;; Define package repositories
 (require 'package)
 
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+;; (add-to-list 'package-archives
+;;              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
              '("elpa" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
@@ -152,44 +152,22 @@
 ;; Display battery percentage
 (display-battery-mode)
 
-;; Start ido-vertical mode auto
-(ido-vertical-mode t)
-
-;; Require and start helm
-;; (require 'helm)
-;; (require 'helm-config)
-;; (helm-mode t)
-
 ;; Projectile
 (projectile-global-mode)
 (setq projectile-enable-caching t)
 
+;; Disable smartmodeline
+(setq sml/theme 'dark)
 
+;; Set 11pt font
+(set-face-attribute 'default nil :height 110)
 
+;; Set the font for emacs
+(set-frame-font "Bitstream Vera Sans Mono")
 
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (tango-dark)))
- '(magit-item-highlight-face nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-variable-tag ((t (:foreground "color-33" :weight bold))))
- '(font-lock-comment-face ((t (:foreground "brightred"))))
- '(font-lock-function-name-face ((t (:foreground "brightcyan"))))
- '(font-lock-keyword-face ((t (:foreground "color-200"))))
- '(font-lock-string-face ((t (:foreground "color-135"))))
- '(magit-diff-add ((t (:foreground "color-40"))) t)
- '(magit-diff-del ((t (:foreground "red"))) t)
- '(magit-diff-file-header ((t (:foreground "brightyellow"))) t)
- '(magit-diff-hunk-header ((t (:foreground "brightwhite"))) t)
- '(magit-item-highlight ((t (:background "color-20" :foreground "brightwhite"))) t)
- '(magit-item-mark ((t (:background "color-20" :foreground "brightwhite"))) t)
- '(magit-log-head-label-bisect-bad ((t (:background "color-20" :foreground "red" :box 1))) t)
- '(minibuffer-prompt ((t (:foreground "color-27")))))
+;; Set color theme
+(require 'color-theme)
+(eval-after-load "color-theme"
+  '(progn
+     (color-theme-initialize)
+     (color-theme-monokai)))

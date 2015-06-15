@@ -35,12 +35,8 @@ export PS1="\[\033[1;36m\][ \T ] > \u@\h:\w\[\033[00m\]\\
 "]]"
 
 
-
-
 # add bash aliases to session
 source ~/.bash_aliases
-
-
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 

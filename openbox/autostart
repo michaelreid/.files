@@ -25,6 +25,7 @@ emacs --daemon &
 
 # Auto-load firefox
 firefox &
+(sleep 5s)
 
 # Auto-load terminal
 gnome-terminal &
@@ -34,4 +35,8 @@ caffeine &
 
 # Remove cursor after 3 seconds
 unclutter -idle 3 -grab &
+(sleep 10s)
+
+# Autostart emacs
+emacsclient -c
 

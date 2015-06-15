@@ -34,33 +34,28 @@
 ;; For all environments:
 ;; - projectile
 ;; - auto-complete
-;; - smex
 ;; - s
 ;; - smart-mode-line
 ;; - multiple-cursors
 ;; - no-easy-keys
-;; - ace-jump-mode
-;; - ido-vertical-mode
-;; - magit
-;; - helm
-;; 
+;; - ace-jump-mode (quickly jump to spot in file)
+;; - magit (git interface)
+;; - helm (M-x replacement)
+;; - helm-dash (Use helm to search Dash docsets)
+;; - project explorer (project sidebar)
+;; - w3m (requires w3m installed in apt)
+;;
 ;; For Python Environment:
 ;; - epc
 ;; - jedi
 ;;
-;; For Ruby on Rails:
-;; -
-;; -
-;;
-;; Other packages for emacs setup:
-;; -
 
 
 ;; This method from jedi-starter.el github user wernerandrew
 ;; https://raw.githubusercontent.com/wernerandrew/jedi-starter/master/jedi-starter.el
-(defvar local-packages '(projectile auto-complete epc jedi smex s smart-mode-line magit
+(defvar local-packages '(projectile auto-complete epc jedi s smart-mode-line magit
 				    multiple-cursors no-easy-keys ace-jump-mode 
-				    ido-vertical-mode helm))
+				    helm project-explorer w3m helm-dash))
 
 (defun uninstalled-packages (packages)
   (delq nil
@@ -155,9 +150,15 @@
 (ido-vertical-mode t)
 
 ;; Require and start helm
-(require 'helm)
-(require 'helm-config)
-(helm-mode t)
+;; (require 'helm)
+;; (require 'helm-config)
+;; (helm-mode t)
+
+;; Projectile
+(projectile-global-mode)
+(setq projectile-enable-caching t)
+
+
 
 
 

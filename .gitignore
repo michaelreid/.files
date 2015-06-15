@@ -33,3 +33,5 @@ weechat/logs/*
 /zsh/zshrc~
 /openbox/autostart~
 /bash/ps1~
+/emacs/project-explorer-cache/
+/emacs/projectile-bookmarks.eld

@@ -123,6 +123,12 @@
 ;; Turn off the Menu Bar
 (menu-bar-mode -1)
 
+;; Turn off Tool bar on GUI
+(tool-bar-mode -1)
+
+;; Turn off Scroll bar on GUI
+(scroll-bar-mode -1)
+
 ;; Unbind C-z for to avoid suspending
 ;; the session in tmux 
 (global-unset-key "\C-z")

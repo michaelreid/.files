@@ -35,7 +35,7 @@
 ;; - projectile
 ;; - auto-complete
 ;; - s
-;; - smart-mode-line
+;; - ido-vertical-mode
 ;; - multiple-cursors
 ;; - no-easy-keys
 ;; - ace-jump-mode (quickly jump to spot in file)
@@ -53,7 +53,7 @@
 
 ;; This method from jedi-starter.el github user wernerandrew
 ;; https://raw.githubusercontent.com/wernerandrew/jedi-starter/master/jedi-starter.el
-(defvar local-packages '(projectile auto-complete epc jedi s smart-mode-line magit
+(defvar local-packages '(projectile auto-complete epc jedi s ido-vertical-mode magit
 				    multiple-cursors no-easy-keys ace-jump-mode 
 				    helm project-explorer w3m helm-dash))
 
@@ -103,9 +103,6 @@
 (load "my-smex.el")
 
 ;; Load smart-mode-line settings
-(load "my-safe-mode-line.el")
-
-;; Load smart-mode-line settings
 (load "my-display-time-settings.el")
 
 ;; Ace-jump mode settings to jump to point in buffer with keyboard
@@ -143,18 +140,25 @@
 (setq column-number-mode t)
 
 ;; Display time mode on
-(display-time-mode)
+;; (display-time-mode)
 
 ;; Disable arrow keys and others
 (require 'no-easy-keys)
 (no-easy-keys 1)
 
 ;; Display battery percentage
-(display-battery-mode)
+;; (display-battery-mode)
 
 ;; Projectile
 (projectile-global-mode)
 (setq projectile-enable-caching t)
+
+;; Set Ido Vertical Mode
+(ido-vertical-mode t)
+
+;; Set Powerline
+(require 'powerline)
+(powerline-default-theme)
 
 ;; Disable smartmodeline
 (setq sml/theme 'dark)
@@ -170,4 +174,4 @@
 (eval-after-load "color-theme"
   '(progn
      (color-theme-initialize)
-     (color-theme-monokai)))
+     (color-theme-solarized)))

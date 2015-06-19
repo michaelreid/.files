@@ -7,8 +7,8 @@
 ;; Define package repositories
 (require 'package)
 
-;; (add-to-list 'package-archives
-;;              '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
              '("elpa" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
@@ -43,19 +43,22 @@
 ;; - helm (M-x replacement)
 ;; - helm-dash (Use helm to search Dash docsets)
 ;; - project explorer (project sidebar)
+;; - color-theme
 ;; - w3m (requires w3m installed in apt)
-;;
-;; For Python Environment:
+;; - ibuffer-vc
 ;; - epc
 ;; - jedi
-;;
+;; - exec-path-from-shell
+;; - inf-ruby
+;; - multi-term
 
 
 ;; This method from jedi-starter.el github user wernerandrew
 ;; https://raw.githubusercontent.com/wernerandrew/jedi-starter/master/jedi-starter.el
-(defvar local-packages '(projectile auto-complete epc jedi s ido-vertical-mode magit
-				    multiple-cursors no-easy-keys ace-jump-mode 
-				    helm project-explorer w3m helm-dash))
+(defvar local-packages '(projectile auto-complete epc jedi s ido-vertical-mode magit powerline
+				    multiple-cursors no-easy-keys ace-jump-mode color-theme
+				    helm project-explorer w3m helm-dash ibuffer-vc
+				    exec-path-from-shell inf-ruby multi-term))
 
 (defun uninstalled-packages (packages)
   (delq nil
@@ -78,11 +81,11 @@
 ;;                                                  ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Load the python emacs kit
-(load-file "~/.emacs.d/emacs-for-python/epy-init.el")
-
 ;; Add `my-customizations` directory to load path
 (add-to-list 'load-path "~/.emacs.d/my-customizations")
+
+;; Load my custom theme file
+(load "mlr-emacs-style.el")
 
 ;; Set-up to use cut and paste in Emacs in terminal
 (load "my-cut-paste.el")
@@ -110,6 +113,16 @@
 
 ;; Load helm-mode and config
 (load "my-helm-mode-config.el")
+
+;; Load my ibuffer vc settings
+(load "my-ibuffer-vc-grouping.el")
+
+;; Load Ruby Mode
+(load "my-ruby-mode-setup.el")
+
+;; Load the python emacs kit
+(load-file "~/.emacs.d/emacs-for-python/epy-init.el")
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                                ;; 
@@ -140,14 +153,14 @@
 (setq column-number-mode t)
 
 ;; Display time mode on
-;; (display-time-mode)
+(display-time-mode)
 
 ;; Disable arrow keys and others
 (require 'no-easy-keys)
 (no-easy-keys 1)
 
 ;; Display battery percentage
-;; (display-battery-mode)
+(display-battery-mode)
 
 ;; Projectile
 (projectile-global-mode)
@@ -156,22 +169,9 @@
 ;; Set Ido Vertical Mode
 (ido-vertical-mode t)
 
-;; Set Powerline
-(require 'powerline)
-(powerline-default-theme)
+;; Setting for pair programming with Richie -
+;; if file in buffer modified, revert buffer
+(global-auto-revert-mode 1)
 
-;; Disable smartmodeline
-(setq sml/theme 'dark)
-
-;; Set 11pt font
-(set-face-attribute 'default nil :height 110)
-
-;; Set the font for emacs
-(set-frame-font "Bitstream Vera Sans Mono")
-
-;; Set color theme
-(require 'color-theme)
-(eval-after-load "color-theme"
-  '(progn
-     (color-theme-initialize)
-     (color-theme-solarized)))
+;; Turn on linum mode
+(add-hook 'prog-mode-hook 'linum-mode)

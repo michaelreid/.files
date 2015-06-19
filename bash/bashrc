@@ -32,8 +32,6 @@ shopt -s checkwinsize
 
 export PS1="\[\033[1;36m\][ \T ] > \u@\h:\w\[\033[00m\]\\
 \n$ "
-"]]"
-
 
 # add bash aliases to session
 source ~/.bash_aliases
